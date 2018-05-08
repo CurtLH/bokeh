@@ -25,3 +25,21 @@ output_file('flowers.html')
 
 show(p)
 
+from bokeh.palettes import Spectral6
+from bokeh.transform import factor_cmap
+
+fruits = ['Apples', 'Pears', 'Nectarines', 'Plums', 'Grapes', 'Strawberries']
+counts = [5, 3, 4, 2, 4, 6]
+
+source = ColumnDataSource(data=dict(fruits=fruits, counts=counts))
+
+q = figure(x_range=fruits, plot_height=350, toolbar_location=None, title="Fruit Counts")
+q.vbar(x='fruits', top='counts', width=0.9, source=source, legend="fruits",
+       line_color='white', fill_color=factor_cmap('fruits', palette=Spectral6, factors=fruits))
+
+q.xgrid.grid_line_color = None
+q.y_range.start = 0
+q.y_range.end = 9
+q.legend.orientation = "horizontal"
+q.legend.location = "top_center"
+

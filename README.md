@@ -12,3 +12,14 @@ Check this out!
 </iframe>
 
 Show me the flowers...
+
+Does anything appear here...
+
+<iframe src="flowers22.html"
+    sandbox="allow-same-origin allow-scripts"
+    width="100%"
+    height="500"
+    scrolling="no"
+    seamless="seamless"
+    frameborder="0">
+</iframe>
