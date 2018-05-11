@@ -93,4 +93,4 @@ show(p)
 # commit the changes
 run(['git', 'add', '.'])
 run(['git', 'commit', '--amend', '--no-edit'])
-run(['git', 'push', '-f'])
+#run(['git', 'push', '-f'])
