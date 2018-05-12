@@ -92,5 +92,5 @@ show(p)
 
 # commit the changes
 run(['git', 'add', '.'])
-run(['git', 'commit', '--amend', '--no-edit'])
-run(['git', 'push', 'curtbot', 'master', '-f'])
+run(['git', 'commit', '-m', 'Update plot'])
+run(['git', 'push', 'curtbot', 'master'])
